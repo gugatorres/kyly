@@ -146,7 +146,7 @@ angular.module("App.controllers", [])
 
         $rootScope.products = [{
             code: '400002',
-            name: 'Blusa Infantil Feminina Kyly Meia Malha',
+            name: 'Blusa Feminina Infantil Kyly',
             cotaLivre: true,
             tipoBloqueio: 'grv',
             tipoEstoque: 'geral',
