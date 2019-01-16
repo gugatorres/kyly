@@ -396,7 +396,13 @@ tfoot {
 }
 
 .icon-green {
-    color: #3c763d;
+    color: #FFF;
+    margin-bottom: 20px;
+}
+
+.modal-body h2 {
+    color: #FFF;
+    font-size: 22px;
 }
 
 .header-blue {
@@ -404,7 +410,13 @@ tfoot {
 }
 
 .header-green {
-    background-color: #3c763d;
+    background-color: #2bc74f;
+    border-bottom: solid 2px #17a237;
+}
+
+.modal-content {
+    background: #2bc74f;
+    border: none;
 }
 
 .modal-title {
@@ -413,6 +425,12 @@ tfoot {
     text-align: center;
     font-weight: 600;
     font-size: 1.5em;
+}
+
+.modal-footer {
+    padding: 15px;
+    text-align: right;
+    border-top: none;
 }
 
 .modal-header {
@@ -528,6 +546,7 @@ tfoot {
 .table-products .product span input {
     border: solid 1px #e5e5e5;
     padding: 10px;
+    margin-bottom: 5px;
     box-shadow: rgba(0,0,0,0.1) -3px 3px 0px;
 }
 
