@@ -427,6 +427,12 @@ tfoot {
     font-size: 1.5em;
 }
 
+.modal-dialog {
+    position: relative;
+    width: 90%;
+    margin: 150px auto;
+}
+
 .modal-footer {
     padding: 15px;
     text-align: right;
