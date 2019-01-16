@@ -1,3 +1,11 @@
+<div class="header">
+
+    <span>
+        <img src="http://www.kyly.com.br/views/media/img/logo.png" style="width:60px;" alt="">
+    </span>
+
+</div>
+
 <panel title="Captação de Pedido" linkback="home" type="form">
     <form class="form-inline">
         <div class="row line-row-filtro">
@@ -34,7 +42,7 @@
             <div class="col-md-2 col-sm-6 col-xs-12">
                 <div class="form-group">
                     <label class="multiline">Data Pedido: </label>
-                    <input class="span-info line30" type="text" ng-model="dataPedido">
+                    <input class="span-info" type="text" ng-model="dataPedido">
                 </div>
             </div>
         </div>
@@ -163,8 +171,8 @@
 
 
     <div class="actions">
-        <button type="button" ng-disabled="estourouCota || estourouEstoque" class="btn btn-primary" ng-click="addItem()"><i
-                class="fa fa-plus" aria-hidden="true"></i> Adicionar</button>
+        <button type="button" ng-disabled="estourouCota || estourouEstoque" class="btn-adicionar" ng-click="addItem()">
+            <i class="fa fa-plus" aria-hidden="true"></i> Adicionar</button>
     </div>
     <div class="pedidos" ng-show="itensPedido.length">
         <h3>Itens Carrinho:</h3>
@@ -183,7 +191,6 @@
             </thead>
             <tfoot>
                 <tr>
-                    <td></td>
                     <td></td>
                     <td></td>
                     <td></td>

@@ -44,7 +44,8 @@ body {
 
 .panel-default {
     /* height: 90%; */
-    padding-bottom: 20px;
+    padding-bottom: 0px;
+    border: none;
 }
 
 .panel-default>.panel-heading {
@@ -89,6 +90,8 @@ body {
     height: 2.5rem;
     padding: 0;
     width: 100%;
+    border: solid 1px #e5e5e5;
+    box-shadow: rgba(0,0,0,0.1) -3px 3px 0px;
 }
 
 .btn-group.open .dropdown-toggle {
@@ -142,6 +145,8 @@ body {
     text-align: center;
     padding: 12px 20px;
     display: block;
+    border: solid 1px #e5e5e5;
+    box-shadow: rgba(0,0,0,0.1) -3px 3px 0px;
 }
 
 .product-select-box h3 {
@@ -187,15 +192,19 @@ body {
 }
 
 .dropdown-menu li {
-    color: #666;
-    padding: 7px;
-    border-bottom: 2px solid #fff;
-    background-color: #f5f5f5;
+    color: #000;
+    padding: 15px 10px;
+    background-color: #FFF;
+    border-bottom: solid 1px #CCC;
+}
+
+.dropdown-menu li:last-child{
+    border:none;
 }
 
 .dropdown-menu li:hover {
     color: #fff;
-    background-color: #777;
+    background-color: #163579;
 }
 
 .table {
@@ -205,10 +214,12 @@ body {
 .dropdown-alpa {
     background: rgb(255, 255, 255);
     line-height: 30px;
-    height: 30px;
+    padding: 10px;
     width: 100%;
     display: block;
     margin-bottom: 10px;
+    border: solid 1px #e5e5e5;
+    box-shadow: rgba(0,0,0,0.1) -3px 3px 0px;
 }
 
 .color-test {
@@ -220,8 +231,32 @@ body {
     box-shadow: rgba(0,0,0,0.2) -1px 1px 0;
 }
 
+.btn-adicionar {
+    background: #163579;
+    border: solid 2px #FFF;
+    padding: 15px 40px;
+    border-radius: 40px;
+    display: block;
+    margin: auto;
+    color: #FFF;
+    font-size: 18px;
+}
+
+.header {
+    background: #163579;
+}
+
+.header span {
+    display: block;
+    margin: auto;
+    width: 100px;
+    background: #FFF;
+    text-align: center;
+    padding: 5px 0;
+}
+
 .dropdown-alpa[disabled] {
-    background-color: #ccc;
+    background-color: #fffca3;
     opacity: .5;
 }
 
@@ -232,12 +267,12 @@ body {
 .span-info {
     color: #000000;
     background: #FFFFFF;
-    border: 1px solid #bfbfbf;
     font-size: 0.875rem;
-    line-height: 2.8;
-    height: 2.5rem;
+    padding: 10px;
     width: 100%;
     text-align: center;
+    border: solid 1px #e5e5e5;
+    box-shadow: rgba(0,0,0,0.1) -3px 3px 0px;
 }
 
 .line30 {
@@ -252,7 +287,7 @@ body {
 }
 
 .span-info2.selected-info {
-    background-color: #3bb53b;
+    background-color: #2bc74f;
     color: #fff;
     font-weight: 600;
 }
@@ -456,7 +491,9 @@ tfoot {
 }
 
 .table-products .product span input {
-    height: 30px;
+    border: solid 1px #e5e5e5;
+    padding: 10px;
+    box-shadow: rgba(0,0,0,0.1) -3px 3px 0px;
 }
 
 .table-products .product span input.ng-invalid-max {
@@ -465,20 +502,22 @@ tfoot {
 }
 
 .table-products .product-footer {
-    height: 27px;
-    padding-top: 5px;
-    background-color: #777;
+    padding: 15px;
+    margin-top: 10px;
+    background-color: #2bc74f;
     display: flex;
     justify-content: space-around;
-    border-bottom: 1px solid #ccc;
-    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #2bc74f;
+    border-top: 1px solid #2bc74f;
     color: #fff;
     font-weight: 600;
 }
 
 .actions {
-    padding: 0 20px;
-    text-align: right;
+    padding: 20px;
+    border-top: solid 1px #ddd;
+    text-align: center;
+    background: #163579;
 }
 
 .table-products .product .show-color {
@@ -519,10 +558,12 @@ tfoot {
 }
 
 .pedidos h3 {
-    background-color: #ccc;
+    background-color: #2bc74f;
     padding: 8px 15px;
-    font-size: 1.4em;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: normal;
+    color: #FFF;
+    text-align: center;
 }
 
 .pedidos .pedidoItem {
