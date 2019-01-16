@@ -391,7 +391,7 @@ angular.module("App.controllers", [])
         $scope.fecharPedido = function() {
             $scope.gerarPedido();
             $rootScope.listaPedidos.push($rootScope.pedido);
-            $scope.open('lg', '', 'view/modal/pedido.html', 'pedido');
+           $scope.open('lg', '', 'view/modal/pedido.html', 'pedido');
         }
 
         $scope.fecharCotacao = function() {
@@ -441,28 +441,7 @@ angular.module("App.controllers", [])
                 }
             });
 
-            modalInstance.result.then(function(selectedItem) {
-
-                console.log('true ' + tipo);
-
-                $rootScope.clearPedido();
-
-                /* console.log('>> ' + $rootScope.itensPedido.length);
-
-                if (tipo == 'cotacao') {
-                    $location.path( "/cotacao" );
-                } else if (tipo == 'pedido') {
-                    $location.path( "/pedidos" );
-                }
-*/
-            }, function() {
-                if (tipo == 'cotacao') {
-                    $location.path("/cotacoes");
-                } else if (tipo == 'pedido') {
-                    $location.path("/pedidos");
-                }
-                $rootScope.clearPedido();
-            });
+            
         };
 
 
