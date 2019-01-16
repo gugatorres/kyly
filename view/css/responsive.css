@@ -1,4 +1,4 @@
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 768px) {
     .table-products {
         width: 1000px;
     }
@@ -6,4 +6,21 @@
     .table {
         width: 1000px;
     }
+
+    .img-produto {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    
+    .form-group label.multiline {
+        text-align: center;
+    }
+    
+    
+    .img-produto {
+        width: 100%;
+    }
+
 }

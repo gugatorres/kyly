@@ -124,6 +124,9 @@
                         <label class="multiline">&nbsp;</label>
                         <span class="span-info2 selected-info" ng-show="selectedProduct.cotaLivre">Cota Livre</span>
                     </div>
+
+                    <div style="clear:both"></div>
+
                 </div>
             </div>
 
@@ -159,16 +162,17 @@
                     </span>
                 </span>
             </div>
-            <div class="product-footer" ng-class="{'cota-estourada':estourouCota == true || estourouEstoque == true }">
-                <span>Total: {{totalTamanhos}} <span ng-if="estourouEstoque"> - Estoque Estourado!</span> <span ng-if="estourouCota">
-                        - Cota Estourada!</span></span>
-
-                <span ng-repeat="tamanho in tamanhos"></span>
-            </div>
+           
         </div>
 
     </div>
 
+    <div class="product-footer" ng-class="{'cota-estourada':estourouCota == true || estourouEstoque == true }">
+            <span>Total: {{totalTamanhos}} <span ng-if="estourouEstoque"> - Estoque Estourado!</span> <span ng-if="estourouCota">
+                    - Cota Estourada!</span></span>
+
+            <span ng-repeat="tamanho in tamanhos"></span>
+        </div>
 
     <div class="actions">
         <button type="button" ng-disabled="estourouCota || estourouEstoque" class="btn-adicionar" ng-click="addItem()">
@@ -178,45 +182,45 @@
         <h3>Itens Carrinho:</h3>
 
         <div style="overflow:auto;">
-        <table class="table table-hover">
-            <thead>
-                <tr>
-                    <th>Material</th>
-                    <th>Nome</th>
-                    <th>Cor</th>
-                    <th>Tamanho</th>
-                    <th>Qnt</th>
-                    <th>Data disponível</th>
-                    <th>Preço unit.</th>
-                    <th>Preço Total</th>
-                </tr>
-            </thead>
-            <tfoot>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>{{totalValorPedido | currency:"R$" }}</td>
-                </tr>
-            </tfoot>
-            <tbody>
-                <tr ng-repeat="pedido in itensPedido">
-                    <td>{{pedido.produto.code}}</td>
-                    <td>{{pedido.produto.name}}</td>
-                    <td> <span class="color-test"></span> </td>
-                    <td>{{pedido.tamanho}}</td>
-                    <td>{{pedido.value}}</td>
-                    <td>{{pedido.produto.data | date:'dd-MM-yyyy' }}</td>
-                    <td>{{pedido.produto.valor | currency:"R$" }}</td>
-                    <td class="bold">{{pedido.produto.valor * pedido.value | currency:"R$"}}</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Material</th>
+                        <th>Nome</th>
+                        <th>Cor</th>
+                        <th>Tamanho</th>
+                        <th>Qnt</th>
+                        <th>Data disponível</th>
+                        <th>Preço unit.</th>
+                        <th>Preço Total</th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>{{totalValorPedido | currency:"R$" }}</td>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    <tr ng-repeat="pedido in itensPedido">
+                        <td>{{pedido.produto.code}}</td>
+                        <td>{{pedido.produto.name}}</td>
+                        <td> <span class="color-test"></span> </td>
+                        <td>{{pedido.tamanho}}</td>
+                        <td>{{pedido.value}}</td>
+                        <td>{{pedido.produto.data | date:'dd-MM-yyyy' }}</td>
+                        <td>{{pedido.produto.valor | currency:"R$" }}</td>
+                        <td class="bold">{{pedido.produto.valor * pedido.value | currency:"R$"}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
         <!-- 
         <span ng-repeat="pedido in itensPedido" class="pedidoItem">
 
