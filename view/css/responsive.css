@@ -10,6 +10,15 @@
     .img-produto {
         width: 30%;
     }
+
+    .btn-clean{
+        width: 100%;
+    }
+
+    .btn-salvar {
+        width: 100%;
+        margin-bottom: 10px;
+    }
 }
 
 @media screen and (max-width: 400px) {

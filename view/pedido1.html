@@ -162,17 +162,17 @@
                     </span>
                 </span>
             </div>
-           
+
         </div>
 
     </div>
 
     <div class="product-footer" ng-class="{'cota-estourada':estourouCota == true || estourouEstoque == true }">
-            <span>Total: {{totalTamanhos}} <span ng-if="estourouEstoque"> - Estoque Estourado!</span> <span ng-if="estourouCota">
-                    - Cota Estourada!</span></span>
+        <span>Total: {{totalTamanhos}} <span ng-if="estourouEstoque"> - Estoque Estourado!</span> <span ng-if="estourouCota">
+                - Cota Estourada!</span></span>
 
-            <span ng-repeat="tamanho in tamanhos"></span>
-        </div>
+        <span ng-repeat="tamanho in tamanhos"></span>
+    </div>
 
     <div class="actions">
         <button type="button" ng-disabled="estourouCota || estourouEstoque" class="btn-adicionar" ng-click="addItem()">
@@ -243,12 +243,26 @@
         </span> -->
     </div>
     <div class="actions" ng-show="itensPedido.length">
-        <button type="button" class="btn btn-danger pull-left" ng-click="limparCarrinho()"><i class="fa fa-trash"
-                aria-hidden="true"></i> Limpar Carrinho</button>
-        <button type="button" class="btn btn-info" ng-click="fecharCotacao()"><i class="fa fa-newspaper-o" aria-hidden="true"></i>
-            Cotação</button>
-        <button type="button" class="btn btn-success" ng-click="fecharPedido()"><i class="fa fa-shopping-cart"
-                aria-hidden="true"></i> Pedido</button>
+
+
+        <div class="col-md-6 col-sm-6 col-xs-12 text-right pull-right">
+
+            <button type="button" class="btn-salvar pull-right" ng-click="fecharPedido()"><i class="fa fa-shopping-cart"
+                    aria-hidden="true"></i> Pedido</button>
+
+        </div>
+
+        <div class="col-md-6 col-sm-6 col-xs-12 text-left pull-left">
+
+            <button type="button" class="btn-clean pull-left" ng-click="limparCarrinho()"><i class="fa fa-trash"
+                    aria-hidden="true"></i> Limpar Carrinho</button>
+            <!--  <button type="button" class="btn-cotacao" ng-click="fecharCotacao()"><i class="fa fa-newspaper-o" aria-hidden="true"></i>
+        Cotação</button>-->
+
+        </div>
+
+
+        <div style="clear:both;"></div>
     </div>
 
 

@@ -145,6 +145,33 @@ body {
     font-size: 22px;
 }
 
+.btn-clean {
+    background: #163579;
+    border: solid 2px #FFF;
+    padding: 15px 40px;
+    border-radius: 40px;
+    color: #FFF;
+    font-size: 18px;
+}
+
+.btn-cotacao {
+    background: #163579;
+    border: solid 2px #FFF;
+    padding: 15px 40px;
+    border-radius: 40px;
+    color: #FFF;
+    font-size: 18px;
+}
+
+.btn-salvar {
+    background: #163579;
+    border: solid 2px #FFF;
+    padding: 15px 40px;
+    border-radius: 40px;
+    color: #FFF;
+    font-size: 18px;
+}
+
 .span-info2 {
     color: #000000;
     background: #FFFFFF;
