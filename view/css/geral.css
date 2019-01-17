@@ -501,6 +501,43 @@ tfoot {
     line-height: 1.3em;
 }
 
+.desktop{display:block}
+.mobile{display:none}
+
+.mobile ul {
+    width: 100%;
+}
+
+.mobile .show-color {
+    max-width: 100% !important;
+}
+
+.mobile ul li {
+    text-align: center;
+    padding: 15px 20px;
+    background: whitesmoke;
+    margin-bottom: 2px;
+    font-size: 14px;
+}
+
+.mobile .table-products .input-sizes {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.mobile .table-products .input-sizes {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 20px;
+    font-size: 22px;
+}
+
 
 /* ************** xxx ************** */
 

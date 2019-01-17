@@ -146,7 +146,7 @@
         </div>
     </form>
 
-    <div style="overflow:auto;">
+    <div class="desktop" style="overflow:auto;">
 
         <div class="table-products" ng-show="pedido.cliente">
             <!-- <div class="table-products"> -->
@@ -175,19 +175,71 @@
             </div>
 
             <div class="product-footer" ng-class="{'cota-estourada':estourouCota == true || estourouEstoque == true }">
-                    <span>Total: {{totalTamanhos}} <span ng-if="estourouEstoque"> - Estoque Estourado!</span> <span ng-if="estourouCota">
-                            - Cota Estourada!</span></span>
-            
-                    <span ng-repeat="tamanho in tamanhos"></span>
-                </div>
+                <span>Total: {{totalTamanhos}} <span ng-if="estourouEstoque"> - Estoque Estourado!</span> <span ng-if="estourouCota">
+                        - Cota Estourada!</span></span>
+
+                <span ng-repeat="tamanho in tamanhos"></span>
+            </div>
 
         </div>
 
-        
+
 
     </div>
 
-  
+    <div class="mobile">
+
+        <div class="table-products" ng-show="pedido.cliente">
+            <!-- <div class="table-products"> 
+            <div class="product-header">
+                <span>Cor</span>
+                <span ng-if="!tamanho.grade" ng-repeat="tamanho in tamanhos">Tam: {{tamanho.tamanho}}</span>
+                <span ng-if="tamanho.grade" ng-repeat="tamanho in tamanhos">Grade: {{tamanho.tamanho}}</span>
+            </div>-->
+            <!--  <div class="product" ng-repeat="opcao in selectedProduct.opcoes"> -->
+            <div class="product" ng-repeat="cor in cores">
+
+                <ul>
+                    <li class="col-xs-12">
+
+                        <span>
+                            <span style="background-color: #fff091" class="show-color"></span>
+                            <span ng-show="selectedProduct.tipoEstoque == 'cor'" class="limite">{{cor.estoque }}</span>
+                        </span>
+
+                    </li>
+
+                    <li ng-repeat="tamanho in tamanhos" class="col-xs-6">
+
+                        <span class="lbl-grade"> {{tamanho.tamanho}}</span> <br>
+                        <input ng-if="tamanho.grade" class="input-sizes" type="number" max="{{tamanho.estoque}}"
+                            ng-change="onChange()" ng-model="itemPedido[cor.cor][tamanho.tamanho].value">
+                        <input ng-if="!tamanho.grade" class="input-sizes" type="number" ng-change="onChange()" ng-model="itemPedido[cor.cor][tamanho.tamanho].value">
+                        <!-- <span ng-show="selectedProduct.tipoEstoque == 'tamanho'" class="limite">{{tamanho.estoque }}</span>
+                    <span class="limite" ng-show="tamanho.grade">
+                        <span class="item-grade" ng-repeat="item in tamanho.grade">
+                            {{item.tamanho}}({{item.value}})&nbsp;&nbsp;</span>
+
+                    </span>-->
+
+                    </li>
+                </ul>
+            </div>
+
+            <div class="product-footer" ng-class="{'cota-estourada':estourouCota == true || estourouEstoque == true }">
+                <span>Total: {{totalTamanhos}} <span ng-if="estourouEstoque"> - Estoque Estourado!</span> <span ng-if="estourouCota">
+                        - Cota Estourada!</span></span>
+
+                <span ng-repeat="tamanho in tamanhos"></span>
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
 
 
     <div class="pedidos" ng-show="itensPedido.length">
