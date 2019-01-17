@@ -21,6 +21,26 @@
     }
 }
 
+@media screen and (max-width: 779px) {
+    
+    .desktop{display:none}
+    .mobile{display:block}
+
+    .form-group label.multiline {
+        text-align: center;
+    }
+
+    .table-products {
+        width: 100%;
+    }
+    
+    
+    .img-produto {
+        width: 100%;
+    }
+
+}
+
 @media screen and (max-width: 400px) {
     
     .desktop{display:none}
